@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/gitsridhar/myopenapi3/echo/Impl/api/models/models"
-	"github.com/labstack/echo/v4"
+	"github.com/gitsridhar/myopenapi3/echo/Impl/api/models"
+	echo "github.com/labstack/echo/v4"
 )
 
 type FruitStore struct {
