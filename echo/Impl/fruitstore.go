@@ -13,7 +13,7 @@ import (
 
 	middleware "github.com/deepmap/oapi-codegen/pkg/middleware"
 	"github.com/gitsridhar/myopenapi3/echo/Impl/api"
-	"github.com/labstack/echo/v4"
+	echo "github.com/labstack/echo/v4"
 	echomiddleware "github.com/labstack/echo/v4/middleware"
 )
 
