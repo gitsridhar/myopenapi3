@@ -10,7 +10,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/gitsridhar/myopenapi3/echo/api"
+	"github.com/gitsridhar/myopenapi3/echo/Impl/api"
 	echomiddleware "github.com/labstack/echo/v4/middleware"
 	middleware "github.com/deepmap/oapi-codegen/pkg/middleware"
 	"github.com/labstack/echo/v4"
