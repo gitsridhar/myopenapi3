@@ -76,7 +76,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pets/{id}:
+  /fruits/{id}:
     get:
       summary: Returns a fruit by ID
       description: Returns a fruit based on a single ID

@@ -35,7 +35,7 @@ func main() {
 	e.Use(echomiddleware.Logger())
 	e.Use(middleware.OapiRequestValidator(swagger))
 
-	api.registerHandlers(e, fruitStore)
+	api.RegisterHandlers(e, fruitStore)
 
 	e.Logger.Fatal(e.Start(net.JoinHostPort("0.0.0.0", *port)))
 }

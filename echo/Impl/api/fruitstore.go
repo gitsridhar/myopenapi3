@@ -96,7 +96,7 @@ func (f *FruitStore) FindFruitByID(ctx echo.Context, fruitId int64) error {
 	return ctx.JSON(http.StatusOK, fruit)
 }
 
-func (f *FruitStore) DeletePet(ctx echo.Context, id int64) error {
+func (f *FruitStore) DeleteFruit(ctx echo.Context, id int64) error {
 	f.Lock.Lock()
 	defer f.Lock.Unlock()
 
@@ -105,5 +105,10 @@ func (f *FruitStore) DeletePet(ctx echo.Context, id int64) error {
 		return sendFruitStoreError(ctx, http.StatusNotFound, fmt.Sprintf("Could not find fruit with ID %d", id))
 	}
 	delete(f.Fruits, id)
-	return ctx.JSON(http.StatusNoContent)
+	return ctx.NoContent(http.StatusNoContent)
+}
+
+func (f *FruitStore) UpdateFruitByID(ctx echo.Context, id int64) error {
+	fruit := f.Fruits[id]
+	return ctx.JSON(http.StatusOK, fruit)
 }
