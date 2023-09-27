@@ -96,7 +96,7 @@ func (f *FruitStore) FindFruitByID(ctx echo.Context, fruitId int64) error {
 	return ctx.JSON(http.StatusOK, fruit)
 }
 
-func (f *fruitStore) DeletePet(ctx echo.Context, id int64) error {
+func (f *FruitStore) DeletePet(ctx echo.Context, id int64) error {
 	f.Lock.Lock()
 	defer f.Lock.Unlock()
 
