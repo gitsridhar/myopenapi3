@@ -1,0 +1,8 @@
+package: api
+output: fruits-server.gen.go
+additional-imports:
+  - package: github.com/gitsridhar/myopenapi3/echo/Impl/api/models
+    alias: .
+generate:
+  echo-server: true
+  embedded-spec: true
