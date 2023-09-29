@@ -1,4 +1,8 @@
 openapi: "3.0.0"
+produces:
+  - application/io.fruitstore.v1/json
+consumes:
+  - application/io.fruitstore.v1/json
 info:
   version: 1.0.0
   title: My Fruit Store

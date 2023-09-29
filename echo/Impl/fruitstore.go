@@ -5,6 +5,11 @@ package main
 // oapi-codegen --config=models.cfg.yaml ../../../myfruit.yaml
 // oapi-codegen --config=server.cfg.yaml ../../../myfruit.yaml
 
+// create: curl -i http://localhost:8080/fruits  -d '{"name":"apple"}' -H 'Content-Type: application/json'
+// get:    curl -i http://localhost:8080/fruits -H 'Content-Type: application/json'
+// update: curl -i http://localhost:8080/fruits/1000 -H 'Content-Type: application/json' -X PUT -d '{"name":"newapple"}'
+// delete: curl -i http://localhost:8080/fruits/1000 -H 'Content-Type: application/json' -X DELETE
+
 import (
 	"flag"
 	"fmt"

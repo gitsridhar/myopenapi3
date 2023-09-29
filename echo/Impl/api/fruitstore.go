@@ -109,6 +109,13 @@ func (f *FruitStore) DeleteFruit(ctx echo.Context, id int64) error {
 }
 
 func (f *FruitStore) UpdateFruitByID(ctx echo.Context, id int64) error {
+	var newFruitRequest models.NewFruit
+	err := ctx.Bind(&newFruitRequest)
+	if err != nil {
+		return sendFruitStoreError(ctx, http.StatusBadRequest, "Invalid format for newFruit")
+	}
 	fruit := f.Fruits[id]
+	fruit.Name = newFruitRequest.Name
+	f.Fruits[id] = fruit
 	return ctx.JSON(http.StatusOK, fruit)
 }
